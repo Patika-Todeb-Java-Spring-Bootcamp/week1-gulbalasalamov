@@ -2,15 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>week1-homework</artifactId>
+        <groupId>com.gulbalasalamov</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gulbalasalamov</groupId>
-    <artifactId>week1-homework</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>question1</module>
-    </modules>
+    <artifactId>question1</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
