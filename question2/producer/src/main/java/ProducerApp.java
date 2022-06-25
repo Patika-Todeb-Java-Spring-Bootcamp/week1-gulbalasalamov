@@ -4,13 +4,16 @@ import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.Scanner;
 
-public class Main {
+public class ProducerApp {
 
     public static void main(String[] args) {
+        init();
+    }
+    static void init() {
         var text = readInput();
         var opt = validateInput(text);
         Path path = Paths.get(Constants.FILE_PATH);
-        opt.ifPresentOrElse(x -> writeFile(path,x),
+        opt.ifPresentOrElse(x -> writeFile(path, x),
                 () -> System.out.println(Constants.WARNING_MSG));
     }
 
@@ -52,6 +55,7 @@ public class Main {
 
     /**
      * In Java 11, we can use the new API named Files.writeString to write a String or text directly toa file.
+     *
      * @param path
      * @param content
      */
