@@ -1,5 +1,5 @@
 /**
- * Note: Clean the text file content at every run.
+ * Note: Clean the text file content at every run!
  * url for text file -> "./question2/src/main/resources/gameScores.txt"
  */
 public class Main {
