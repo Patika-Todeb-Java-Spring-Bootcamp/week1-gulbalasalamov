@@ -1,17 +1,20 @@
+/**
+ * Note: Clean the text file content at every run.
+ * url for text file -> "./question2/src/main/resources/gameScores.txt"
+ */
 public class Main {
     private static volatile boolean isFileEmpty = true;
 
     public static void main(String[] args) {
         run();
     }
-
     public static void run() {
+        Thread writer = new Thread(ProducerApp::init);
+        Thread reader = new Thread(ConsumerApp::init);
         while (isFileEmpty) {
-            Thread writer = new Thread(ProducerApp::init);
             writer.start();
             updateFileStatus();
         }
-        Thread reader = new Thread(ConsumerApp::init);
         reader.start();
     }
 
