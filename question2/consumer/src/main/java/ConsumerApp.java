@@ -20,7 +20,6 @@ public class ConsumerApp {
 
     /**
      * The method reads all lines from a file into a Stream.
-     *
      * @param path
      * @return Optional of String
      */
