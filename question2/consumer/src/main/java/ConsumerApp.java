@@ -5,18 +5,22 @@ import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class Main {
+public class ConsumerApp {
     public static final String FILE_PATH = "./question2/src/main/resources/gameScores.txt";
 
     public static void main(String[] args) {
+        init();
+    }
+
+    static void init() {
         Path path = Paths.get(FILE_PATH);
         var opt = readFileContent(path);
         opt.ifPresentOrElse(System.out::println, () -> System.out.println("No record found"));
-
     }
 
     /**
      * The method reads all lines from a file into a Stream.
+     *
      * @param path
      * @return Optional of String
      */
