@@ -29,8 +29,10 @@ public class Main {
     }
 
     /**
-     * The method removes the white spaces and breaks given string against given expression (-)
-     * @param input
+     * The method removes the white spaces and breaks given string against given expression (-), and place the string in an array.
+     * Adana 1 - 2 Konya -> var arr = [{Adana1},{2Konya}]
+     * Team1=Adana, score=1, Team2=Konya, score2
+     * @param input scanner string
      * @return If param string meets condition, Optional<String> returns. Otherwise, empty Optional
      */
     static Optional<String> validateInput(String input) {
